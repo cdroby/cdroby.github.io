@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+	<!-- JQuery based stylesheets and JS -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" /> 
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	
+	<!-- Cards based stylesheets and JS -->
+	<link rel="stylesheet" type="text/css" href="cards/css.css">
+	<link rel="stylesheet" type="text/css" href="cards.css">
+	<script src="swipe.js"></script>
+</head>
+<body>
+<div class="container">
+	
+<div class="page page1" id="blue">
+
+	<div class="header">
+	<h1>Cards</h1>
+	</div>
+
+	<div class="flexbox">
+		
+	<div class="div1">
+	<h2>How they work</h2>
+	<p>You can swipe left or right to progress forward into the story</p>
+	<p>If a back button is implemented</p>
+	<p>You can press it to move backwards</p>
+	<button type="button" onclick="backshift()" data-inline="true">Back</button>
+	</div>
+	
+	<div class="div2">
+	<p>You can also press that little arrow in the bottom left at any point</p>
+	<p>but both buttons are optional, you can also swipe all the way through</p>
+	<p>and back to the beginning!</p>
+	</div>
+	
+	</div> <!-- Flexbox -->
+	
+	<div class="backnav" onclick="backshift()">
+	</div>
+	</div>
+<div class="page page2" id="red">
+	
+	<div class="flexbox">
+		
+	<div class="div1">
+		<p>I recommend spacing your cards into 3 sections</p>
+	</div>
+	<div class="div2">
+		<p>Each of these sections should fully contain their content</p>
+		<p>This is achieved with display:flex and overlap:hidden</p>
+	</div>
+	<div class="div3">
+		<p>Smaller screens will run out of space in overly wordy situations</p>
+		<p>Especially in trying to manage between portrait and landscape views</p>
+	</div>
+	
+	</div> <!-- Flexbox -->
+	
+	<div class="backnav">
+		<img src="cards/assets/ic_arrow_back_white_2x_web_24dp.png" onclick="backshift()">
+	</div>
+	
+</div>
+<div class="page page3" id="yellow">
+	<div class="backnav" onclick="backshift()">
+	</div>
+<h1>PAGE3</h1>
+</div>
+<div class="page page4" id="green">
+	<div class="backnav" onclick="backshift()">
+	</div>
+<h1>PAGE4</h1>
+</div>
+
+</div> <!-- container -->
+</body>

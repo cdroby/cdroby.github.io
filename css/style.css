@@ -1,0 +1,307 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+body {
+  font-size: 120%;
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+* {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, p, span, li {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.87);
+}
+a:visited {
+  color: rgba(0, 0, 0, 0.87);
+}
+a:hover {
+  color: rgba(0, 0, 0, 0.87);
+}
+a:active {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* depth shadow settings */
+/* Flex Classes */
+.flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.flex-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Class basics */
+.container {
+  padding: 2% 0;
+}
+
+.container:first-child {
+  padding-top: 0;
+}
+
+.container:last-child {
+  padding-bottom: 0;
+}
+
+.page {
+  position: relative;
+  margin: auto;
+  padding: 8% 0;
+}
+
+.pageBG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.pageContent {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.pageImage, .pageText {
+  margin: auto;
+}
+
+.pageImage {
+  display: block;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 250px;
+      -ms-flex: 0 0 250px;
+          flex: 0 0 250px;
+}
+
+.pageText {
+  display: block;
+  max-width: 600px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 auto;
+      -ms-flex: 1 auto;
+          flex: 1 auto;
+  text-align: center;
+}
+
+/* page specific tuning */
+/* about */
+#about {
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#about img {
+  border-radius: 250px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background-color: #00695C;
+}
+
+#about .pageBG {
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.3) 60%, #fafafa 40%), url("http://www.cdroby.com/portfolio/images/sfBridge.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.3) 60%, #fafafa 40%), url("http://www.cdroby.com/portfolio/images/sfBridge.jpg");
+  background-size: cover;
+  z-index: -1;
+}
+
+#about .pageText {
+  margin-top: 30%;
+  max-height: 50%;
+}
+
+/* portfolio */
+#portfolio {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#portfolio .pageBG {
+  background: #009688;
+  z-index: -1;
+}
+
+#portfolio .pageContent {
+  background-size: cover;
+  color: white;
+}
+
+.carddeck {
+  max-width: 800px;
+}
+
+.card {
+  width: 575px;
+  height: 150px;
+  background: #FAFAFA;
+  position: relative;
+  border-radius: 2px;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background: white;
+  text-align: right;
+  z-index: 1;
+  margin: 1rem;
+  border-top-left-radius: 125px;
+  border-bottom-left-radius: 125px;
+}
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+.card img {
+  border-radius: 75px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 150px;
+  width: 150px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.card span {
+  margin: 5px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  max-width: 300px;
+  text-align: right;
+}
+
+.card h1 {
+  text-align: right;
+}
+
+/* contact */
+#contact .pageBG {
+  background: #FAFAFA;
+  z-index: -1;
+}
+
+#contact .pageText {
+  font-size: 82%;
+  margin: 2rem;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 300px;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 50%;
+}
+
+#contact h1 {
+  padding: 1rem;
+  display: inline-block;
+  font-size: 3rem;
+  top: -5px;
+}
+
+#contact li {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  height: 80px;
+  list-style: none;
+  margin: 1rem;
+}
+#contact li:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+}
+
+#contact a {
+  text-decoration: none;
+  padding: 2rem;
+  margin: 0px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.li_logo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  border: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.li_logo img {
+  max-width: 48px;
+  overflow: hidden;
+}
+
+#contact_play li img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Contact bars */
+#contact_work li {
+  background: #EEEEEE;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  color: white;
+}
+
+#contact_work .li_logo {
+  background: #E0E0E0;
+}
+
+#contact_play li {
+  background: #55acee;
+  color: white;
+}
+#contact_play li a {
+  color: white;
+}
+#contact_play li:nth-child(2) {
+  background: #DC4E41;
+}
+#contact_play li:nth-child(3) {
+  background: #3B5998;
+}
+#contact_play li:nth-child(4) {
+  background: #FECE32;
+}
+#contact_play li:nth-child(4) a {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+#contact_play .li_logo {
+  background: #FFCCBC;
+}
+
+/* parallax for shits and giggles */
